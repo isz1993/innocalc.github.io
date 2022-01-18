@@ -20,9 +20,13 @@
   <link href="css/style.css" rel="stylesheet">
 
   <title>Calculadora de Innovación | Rotoplas</title>
+
+  <!-- JS PDF-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
 </head>
 
-<body>
+<body id="body12">
 
   <!-- Nav Bar Image and text -->
   <nav class="navbar navbar-dark" style="background-color: #002554;">
@@ -42,100 +46,103 @@
       </div>
       <div class="card-body">
 
-    <form>
-
-     
-        <label  for="nombre" class="form-label mt-2"> Nombre de la iniciativa</label>
-        <input type="text" class="form-control " id="nom" name="nom">
-
-        <label for="nombre" class="form-label mt-2"> ¿Cuál es el objetivo de mercado de la iniciativa? </label>
-        <select class="form-control" id="mercado">
-          <option hidden>Selecciona una opción</option>
-          <option value="1">Servir a los mercados y clientes existentes</option>
-          <option value="2">Ingresar a mercados adyacentes para atender a clientes nuevos</option>
-          <option value="3">Creación de nuevos mercados y dirigirse a nuevas necesidades de los clientes</option>
-        </select>
-
-        <label for="nombre" class="form-label mt-2"> ¿Qué capacidades se necesitan para desarrollar la iniciativa? </label>
-        <select class="form-control" id="capacidad">
-          <option hidden>Selecciona una opción</option>
-          <option value="1">Capacidades existentes, productos o activos existentes</option>
-          <option value="2">Incorporar algunas capacidades nuevas (productos, tecnologías, etc)</option>
-          <option value="3">Capacidades nuevas y desarrollo de nuevos productos, tecnologías y activos</option>
-        </select>
+        <form>
 
 
-        <label for="nombre" class="form-label mt-2"> ¿Cuál es el rango de inversión requiere la iniciativa? </label>
-        <select class="form-control" id="inversion">
-          <option hidden>Selecciona una opción</option>
-          <option value="1"> &#60 5M MXN </option>
-          <option value="2"> &#62 5M MXN & &lt; 35M MXN </option>
-          <option value="3"> &#62 35M MXN </option>
-        </select>
+          <label for="nombre" class="form-label mt-2"> Nombre de la iniciativa</label>
+          <input type="text" class="form-control " id="nom" name="nom">
+
+          <label for="nombre" class="form-label mt-2"> ¿Cuál es el objetivo de mercado de la iniciativa? </label>
+          <select class="form-control" id="mercado">
+            <option hidden>Selecciona una opción</option>
+            <option value="1">Servir a los mercados y clientes existentes</option>
+            <option value="2">Ingresar a mercados adyacentes para atender a clientes nuevos</option>
+            <option value="3">Creación de nuevos mercados y dirigirse a nuevas necesidades de los clientes</option>
+          </select>
+
+          <label for="nombre" class="form-label mt-2"> ¿Qué capacidades se necesitan para desarrollar la iniciativa?
+          </label>
+          <select class="form-control" id="capacidad">
+            <option hidden>Selecciona una opción</option>
+            <option value="1">Capacidades existentes, productos o activos existentes</option>
+            <option value="2">Incorporar algunas capacidades nuevas (productos, tecnologías, etc)</option>
+            <option value="3">Capacidades nuevas y desarrollo de nuevos productos, tecnologías y activos</option>
+          </select>
 
 
-        <label for="nombre" class="form-label mt-2"> Si conoces el posible impacto ($) de tu inciaitiva elige el rango que
-          más
-          se acerque</label>
-        <select class="form-control">
-          <option hidden>Selecciona una opción</option>
-          <option> &#60; 5M MXN </option>
-          <option> &#62 5M MXN & &#60; 10M MXN </option>
-          <option> &#62 10M MXN & &#60; 15M MXN </option>
-          <option> &#62 15M MXN & &#60; 25M MXN </option>
-          <option> &#62 25M MXN </option>
-        </select>
-     
-
-  <!-- Button trigger modal -->
+          <label for="nombre" class="form-label mt-2"> ¿Cuál es el rango de inversión requiere la iniciativa? </label>
+          <select class="form-control" id="inversion">
+            <option hidden>Selecciona una opción</option>
+            <option value="1"> &#60 5M MXN </option>
+            <option value="2"> &#62 5M MXN & &lt; 35M MXN </option>
+            <option value="3"> &#62 35M MXN </option>
+          </select>
 
 
-  <button type="button" class="btn btn-primary mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="ElemID">
-    Resultado
-  </button>
-   
- </div>
-  
-</div>
-      <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Calculadora de innovación</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <label for="nombre" class="form-label mt-2"> Si conoces el posible impacto ($) de tu inciaitiva elige el rango
+            que
+            más
+            se acerque</label>
+          <select class="form-control">
+            <option hidden>Selecciona una opción</option>
+            <option> &#60; 5M MXN </option>
+            <option> &#62 5M MXN & &#60; 10M MXN </option>
+            <option> &#62 10M MXN & &#60; 15M MXN </option>
+            <option> &#62 15M MXN & &#60; 25M MXN </option>
+            <option> &#62 25M MXN </option>
+          </select>
+
+
+          <!-- Button trigger modal -->
+
+
+          <button type="button" class="btn btn-primary mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            id="ElemID">
+            Resultado
+          </button>
+
+      </div>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="moda1">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Calculadora de innovación</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="bodyd">
+            <div style="text-align: center;">
+              <img src="img/rotoplas_logo_n.svg" alt="Rotoplas" width="200" height="100">
             </div>
-            <div class="modal-body">
-              <div style="text-align: center;">
-                <img src="img/rotoplas_logo_n.svg" alt="Rotoplas" width="200" height="100">
-              </div>
-              <br>
-              La iniciativa : 
-              <p id="ini">
+            <br>
+            La iniciativa :
+            <p id="ini">
 
-              </p>
+            </p>
 
-              El tipo de Innnovación: 
-              <p id="tipo">
+            El tipo de Innnovación:
+            <p id="tipo">
 
-              </p>
-              Riesgo:
-              <p id="riesgo">
+            </p>
+            Riesgo:
+            <p id="riesgo">
 
-              </p>
-              Incertidumbre:
-              <p id="incertidumbre">
+            </p>
+            Incertidumbre:
+            <p id="incertidumbre">
 
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Guardar en PDF</button>
-            </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="generatepdf">Guardar Imagen</button>
           </div>
         </div>
       </div>
+    </div>
 
   </div>
   </div>
@@ -152,12 +159,19 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+  <!-- Scripts independientes -->
 
-  <script src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/createpdf.js"></script>
+  <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 
   <!-- Ionic Bib Iconos-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
