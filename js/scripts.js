@@ -43,7 +43,7 @@ myElem.onclick = function () {
 
 
 bpdf.onclick = function () {
-  const  $objetivo = document.querySelector("#body12");
+  const  $objetivo = document.querySelector("#staticBackdrop");
   html2canvas($objetivo) // Llamar a html2canvas y pasarle el elemento
   .then(canvas => {
     // Cuando se resuelva la promesa traerá el canvas
