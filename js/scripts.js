@@ -17,8 +17,6 @@ const vres = document.getElementById('resultados');
 const vprodtext = document.getElementById('prodtext');
 
 
-
-
 myElem.onclick = function () {
 
   if (vmer.selectedIndex == 0 || vcap.selectedIndex == 0) {
