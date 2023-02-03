@@ -6,6 +6,7 @@ const vmer = document.querySelector('#mercado');
 const vcap = document.querySelector('#capacidad');
 const vinv = document.querySelector('#inversion');
 const vimp = document.querySelector('#impacto');
+const vprod = document.querySelector('#productos');
 
 const vini = document.getElementById('ini');
 const vtip = document.getElementById('tipo');
@@ -13,6 +14,7 @@ const vrie = document.getElementById('riesgo');
 const vinc = document.getElementById('incertidumbre');
 const vnom = document.getElementById('nom');
 const vres = document.getElementById('resultados');
+const vprodtext = document.getElementById('prodtext');
 
 
 
@@ -22,7 +24,9 @@ myElem.onclick = function () {
   if (vmer.selectedIndex == 0 || vcap.selectedIndex == 0) {
 
   } else if (vmer.selectedIndex <= 2 && vcap.selectedIndex <= 2 && vinv.selectedIndex == 3) {
+    
     vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
     vtip.innerHTML = "<b>Innovación Tranformacional</b>";
     vrie.innerHTML = "<b>Riesgo alto.</b> El desarrollo e implementación de esta iniciativa puede tener impactos importantes  en la organización: inverisón alta, tiempos de desarrollo largos, iteraciones continuas, equipos altamente enfocados.";
     vinc.innerHTML = "<b>Incertidumbre Alta.</b> La información con la que se cuenta es muy limitada, la organización no cuenta con experiencia, es importante dimensionar el mercado, el tipo de usuario y el tipo de capacidad /tecnologías necesarias para el desarrollo y ejecución de la iniciativa.";
@@ -30,12 +34,14 @@ myElem.onclick = function () {
   
   } else if (vmer.selectedIndex == 1 && vcap.selectedIndex == 1) {
     vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
     vtip.innerHTML = "<b>Innovación Incremental</b>";
     vrie.innerHTML = "<b>Riesgo Bajo.</b> El impacto de esta iniciativa es muy limitado y la organización puede controlar los impactos negativos. No se compromete el recurso humano y financiero.";
     vinc.innerHTML = "<b>Incertidumbre Baja.</b> Se cuenta con la información de mercado, capacidades de comerciales, entendimiento del usuario y tecnología para su desarrollo.";
     vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
   } else if (vmer.selectedIndex <= 2 && vcap.selectedIndex != 3) {
     vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
     vtip.innerHTML = "<b>Innovación Adyacente</b>";
     vrie.innerHTML = "<b>Riesgo medio. </b> Esta iniciativa impacta altamente en un canal y categoría de la organización, el enfoque comercial y usuario son primordiales para asegurar el éxito de la iniciativa.";
     vinc.innerHTML = "<b>Incertidumbre Moderada. </b>  Se cuenta con gran parte de las capacidades necesarias para el desarrollo de la iniciativa. Existe información limitada de mercado y usuario.";
@@ -43,6 +49,7 @@ myElem.onclick = function () {
 
   } else {
     vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
     vtip.innerHTML = "<b>Innovación Tranformacional</b>";
     vrie.innerHTML = "<b>Riesgo alto.</b> El desarrollo e implementación de esta iniciativa puede tener impactos importantes  en la organización: inverisón alta, tiempos de desarrollo largos, iteraciones continuas, equipos altamente enfocados.";
     vinc.innerHTML = "<b>Incertidumbre Alta.</b> La información con la que se cuenta es muy limitada, la organización no cuenta con experiencia, es importante dimensionar el mercado, el tipo de usuario y el tipo de capacidad /tecnologías necesarias para el desarrollo y ejecución de la iniciativa.";
