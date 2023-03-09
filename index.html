@@ -40,27 +40,29 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <!-- <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="indexen.html">English </span></a>
         </li>
       </ul>
-    </div>
+    </div>!-->
     </div>
   </nav>
 
-<section id="hero">
+<!--<section id="hero">
   <div class="container">
     <h1> Calculadora de Innovación</h1>
   </div>
-</section>
+</section>!-->
 
   <!-- Formulario -->
   <div class="container mt-4">
     <div class="card">
       <div class="card-header">
-        Calculadora de Innovación: Selecciona dentro de los apartados que sentencia concuerda con tu iniciativa
+        <b>Tipo de Innovación</b>
+        <p class="card-text"><small class="text-muted"> Selecciona dentro de los apartados que sentencia concuerda con tu iniciativa </small></p>
+
       </div>
       <div class="card-body">
 
@@ -70,44 +72,42 @@
           <label for="nombre" class="form-label mt-2"> Nombre de la iniciativa</label>
           <input type="text" class="form-control " id="nom" name="nom">
 
-          <label for="nombre" class="form-label mt-2"> ¿Cuál es el objetivo de mercado de la iniciativa? </label>
-          <select class="form-control" id="mercado">
+          <label for="nombre" class="form-label mt-2"> ¿Cuál es el tipo de solución de las iniciativa? </label>
+          <select class="form-control" id="tipsl">
             <option hidden>Selecciona una opción</option>
-            <option value="1">Servir a los mercados y clientes existentes</option>
-            <option value="2">Ingresar a mercados adyacentes para atender a clientes nuevos</option>
-            <option value="3">Creación de nuevos mercados y dirigirse a nuevas necesidades de los clientes</option>
+            <option value="1">Un producto</option>
+            <option value="2">Un conjunto de soluciones (Productos)</option>
+            <option value="3">Nuevos canales y geografías</option>
           </select>
 
-          <label for="nombre" class="form-label mt-2"> ¿Qué capacidades se necesitan para desarrollar la iniciativa?
-          </label>
-          <select class="form-control" id="capacidad">
+          <label for="nombre" class="form-label mt-2"> ¿Cuál es el nivel de implementación de la iniciativa por Rotoplas? </label>
+          <select class="form-control" id="impl">
             <option hidden>Selecciona una opción</option>
-            <option value="1">Capacidades existentes, productos o activos existentes</option>
-            <option value="2">Incorporar algunas capacidades nuevas (productos, tecnologías, etc)</option>
-            <option value="3">Capacidades nuevas y desarrollo de nuevos productos, tecnologías y activos</option>
-          </select>
-
-
-          <label for="nombre" class="form-label mt-2"> ¿Cuál es el rango de inversión requiere la iniciativa? </label>
-          <select class="form-control" id="inversion">
-            <option hidden>Selecciona una opción</option>
-            <option value="1"> &#60 5M MXN </option>
-            <option value="2"> &#62 5M MXN & &lt; 35M MXN </option>
-            <option value="3"> &#62 35M MXN </option>
+            <option value="1">Solución conocida e implementada por Rotoplas</option>
+            <option value="2">Solución que existe sin implementar por Rotoplas</option>
+            <option value="3">Soluciones  nuevas sin implementar por Rotoplas en nuevos canales o nuevas geografias</option>
           </select>
 
 
-          <label for="nombre" class="form-label mt-2"> Si conoces el posible impacto ($) de tu inciaitiva elige el rango
-            que
-            más
-            se acerque</label>
-          <select class="form-control" id="impacto">
+          <label for="nombre" class="form-label mt-2"> ¿Cuál es el tipo de producción?</label>
+          <select class="form-control" id="prod">
             <option hidden>Selecciona una opción</option>
-            <option> &#60; 5M MXN </option>
-            <option> &#62 5M MXN & &#60; 10M MXN </option>
-            <option> &#62 10M MXN & &#60; 15M MXN </option>
-            <option> &#62 15M MXN & &#60; 25M MXN </option>
-            <option> &#62 25M MXN </option>
+            <option value="1">Make</option>
+            <option value="2">Buy</option>
+          </select>
+
+          <label for="nombre" class="form-label mt-2"> ¿Cuál es el nivel de madurez tecnológica de la idea?</label>
+          <select class="form-control" id="trl">
+            <option hidden>Selecciona una opción</option>
+            <option value="1">Idea básica. Mínima disponibilidad</option>
+            <option value="2">Concepto o tecnología formulados</option>
+            <option value="3">Prueba de concepto</option>
+            <option value="4">Componentes validados en laboratorio</option>
+            <option value="5">Componentes validados en entorno relevante</option>
+            <option value="6">Tecnología validada en entorno relevante</option>
+            <option value="7">Tecnología validada en entorno relevante</option>
+            <option value="8"> Tecnología validada y certificada en entorno real</option>
+            <option value="9"> Tecnología disponible en entorno real. Máxima disponibilidad</option>
           </select>
 
 
@@ -174,45 +174,63 @@
    <div class="container mt-4">
     <div class="card">
       <div class="card-header">
-        Calculadora de Go To MKT: Selecciona dentro de los apartados que sentencia concuerda con tu iniciativa
+        <b>Nivel de información</b>
+        <p class="card-text"><small class="text-muted"> Selecciona los elementos con los que cuentas previo L2 </small></p>
+
       </div>
       <div class="card-body">
 
         <form>
 
-          <label for="nombre" class="form-label mt-2"> Tipo de producto</label>
-          <select class="form-control" id="productos">
-            <option hidden>Selecciona una opción</option>
-            <option> Nuevo producto</option>
-            <option> Nuevo Sistema</option>
-            <option> Extensión de Linea</option>
-            <option> Mejora de Productos</option>
-          </select>
+          <div class="row">
 
-          <label for="años_in" class="form-label mt-2"> Antiguedad del producto en el mercado </label>
-          <input type="number" class="form-control " id="años" name="años">
+          <div class="form-check form-switch col">
+            <input class="form-check-input" type="checkbox" id="flex1">
+            <label class="form-check-label" for="flexSwitchCheckDefault"> Oportunidad/Necesidad/Problema identificado </label>
+          </div>
 
+          <div class="form-check form-switch col">
+            <input class="form-check-input" type="checkbox" id="flex2"  >
+            <label class="form-check-label" for="flexSwitchCheckDefault">Dimensionamiento de Mercado </label>
+          </div>
 
-          <label for="años_in" class="form-label mt-2"> Número de competidores </label>
-          <input type="number" class="form-control " id="años" name="años">
+        </div>
+
+          <div class="row">
+
+            <div class="form-check form-switch col">
+              <input class="form-check-input" type="checkbox" id="flex3">
+              <label class="form-check-label" for="flexSwitchCheckDefault"> Perfil de usuario /cliente  </label>
+            </div>
+  
+            <div class="form-check form-switch col">
+              <input class="form-check-input" type="checkbox" id="flex4"  >
+              <label class="form-check-label" for="flexSwitchCheckDefault">Participación del Mercado</label>
+            </div>
+        </div>
         
-        <label for="años_in" class="form-label mt-2"> Market Share Esperado (%)</label>
-          <input type="text" class="form-control " id="años" name="años">
-        
 
+        <div class="row">
 
-          
-        
+          <div class="form-check form-switch col">
+            <input class="form-check-input" type="checkbox" id="flex5">
+            <label class="form-check-label" for="flexSwitchCheckDefault"> Normas/Certificaciones/Especificaciones aplicables</label>
+          </div>
+
+          <div class="form-check form-switch col">
+            <input class="form-check-input" type="checkbox" id="flex6"  >
+            <label class="form-check-label" for="flexSwitchCheckDefault">Comparación de la Competencia (Benchmark)</label>
+          </div>
+      </div>       
         </form>
-
-
-
-    <button type="button" class="btn btn-primary mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-            id="ElemID">
-            Resultado
-          </button>
       </div>
+
+      
     </div>
+    <button type="button" class="btn btn-primary mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+    id="ElemID">
+    Resultado
+  </button>
   </div>
 
   </div>

@@ -2,11 +2,10 @@ var myElem = document.getElementById("ElemID");
 var mybuton = document.getElementById("ElemIDen");
 var bpdf = document.getElementById("generatepdf");
 
-const vmer = document.querySelector('#mercado');
-const vcap = document.querySelector('#capacidad');
-const vinv = document.querySelector('#inversion');
-const vimp = document.querySelector('#impacto');
-const vprod = document.querySelector('#productos');
+const vtipsl = document.querySelector('#tipsl');
+const vimpl = document.querySelector('#impl');
+const vprod = document.querySelector('#prod');
+const vtrl = document.querySelector('#trl');
 
 const vini = document.getElementById('ini');
 const vtip = document.getElementById('tipo');
@@ -19,6 +18,89 @@ const vprodtext = document.getElementById('prodtext');
 
 myElem.onclick = function () {
 
+ 
+  if (vtipsl.selectedIndex==1 && vimpl.selectedIndex==1 && vprod.selectedIndex==1){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Extensión de Linea</b>";
+    vrie.innerHTML = "<b>Riesgo medio. </b> Esta iniciativa impacta altamente en un canal y categoría de la organización, el enfoque comercial y usuario son primordiales para asegurar el éxito de la iniciativa.";
+    vinc.innerHTML = "<b>Incertidumbre Moderada. </b>  Se cuenta con gran parte de las capacidades necesarias para el desarrollo de la iniciativa. Existe información limitada de mercado y usuario.";
+   vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+  else if (vtipsl.selectedIndex==1 && vimpl.selectedIndex==1){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Extensión de Linea</b>";
+    vrie.innerHTML = "<b>Riesgo Bajo.</b> El impacto de esta iniciativa es muy limitado y la organización puede controlar los impactos negativos. No se compromete el recurso humano y financiero.";
+    vinc.innerHTML = "<b>Incertidumbre Baja.</b> Se cuenta con la información de mercado, capacidades de comerciales, entendimiento del usuario y tecnología para su desarrollo.";
+    vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+   
+  if (vtipsl.selectedIndex==1 && vimpl.selectedIndex==2 && vprod.selectedIndex==2){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Nuevo Producto/b>";
+    vrie.innerHTML = "<b>Riesgo medio. </b> Esta iniciativa impacta altamente en un canal y categoría de la organización, el enfoque comercial y usuario son primordiales para asegurar el éxito de la iniciativa.";
+    vinc.innerHTML = "<b>Incertidumbre Moderada. </b>  Se cuenta con gran parte de las capacidades necesarias para el desarrollo de la iniciativa. Existe información limitada de mercado y usuario.";
+   vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+  else if (vtipsl.selectedIndex==1 && vimpl.selectedIndex==2){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Nuevo Producto</b>";
+    vrie.innerHTML = "<b>Riesgo alto.</b> El desarrollo e implementación de esta iniciativa puede tener impactos importantes  en la organización: inverisón alta, tiempos de desarrollo largos, iteraciones continuas, equipos altamente enfocados.";
+    vinc.innerHTML = "<b>Incertidumbre Alta.</b> La información con la que se cuenta es muy limitada, la organización no cuenta con experiencia, es importante dimensionar el mercado, el tipo de usuario y el tipo de capacidad /tecnologías necesarias para el desarrollo y ejecución de la iniciativa.";
+    vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+
+  else if (vtipsl.selectedIndex==2 && vimpl.selectedIndex==1 && vprod.selectedIndex==1){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Nuevo sistema</b>";
+    vrie.innerHTML = "<b>Riesgo alto.</b> El desarrollo e implementación de esta iniciativa puede tener impactos importantes  en la organización: inverisón alta, tiempos de desarrollo largos, iteraciones continuas, equipos altamente enfocados.";
+    vinc.innerHTML = "<b>Incertidumbre Alta.</b> La información con la que se cuenta es muy limitada, la organización no cuenta con experiencia, es importante dimensionar el mercado, el tipo de usuario y el tipo de capacidad /tecnologías necesarias para el desarrollo y ejecución de la iniciativa.";
+    vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+
+else if (vtipsl.selectedIndex==2 && vimpl.selectedIndex==1 ){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Nuevo sistema</b>";
+    vrie.innerHTML = "<b>Riesgo medio. </b> Esta iniciativa impacta altamente en un canal y categoría de la organización, el enfoque comercial y usuario son primordiales para asegurar el éxito de la iniciativa.";
+    vinc.innerHTML = "<b>Incertidumbre Moderada. </b>  Se cuenta con gran parte de las capacidades necesarias para el desarrollo de la iniciativa. Existe información limitada de mercado y usuario.";
+    vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+
+  else if (vtipsl.selectedIndex==2 && vimpl.selectedIndex==2 && vprod.selectedIndex==2){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Nuevo sistema</b>";
+    vrie.innerHTML = "<b>Riesgo medio. </b> Esta iniciativa impacta altamente en un canal y categoría de la organización, el enfoque comercial y usuario son primordiales para asegurar el éxito de la iniciativa.";
+    vinc.innerHTML = "<b>Incertidumbre Moderada. </b>  Se cuenta con gran parte de las capacidades necesarias para el desarrollo de la iniciativa. Existe información limitada de mercado y usuario.";
+    vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+
+else if (vtipsl.selectedIndex==2 && vimpl.selectedIndex==2){
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Nuevo sistema</b>";
+    vrie.innerHTML = "<b>Riesgo alto.</b> El desarrollo e implementación de esta iniciativa puede tener impactos importantes  en la organización: inverisón alta, tiempos de desarrollo largos, iteraciones continuas, equipos altamente enfocados.";
+    vinc.innerHTML = "<b>Incertidumbre Alta.</b> La información con la que se cuenta es muy limitada, la organización no cuenta con experiencia, es importante dimensionar el mercado, el tipo de usuario y el tipo de capacidad /tecnologías necesarias para el desarrollo y ejecución de la iniciativa.";
+    vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+  } 
+
+
+  else {
+    vini.innerHTML = "<b>" + vnom.value + "</b>";
+    vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
+    vtip.innerHTML = "<b>Nuevos Mercados</b>";
+    vrie.innerHTML = "<b>Riesgo alto.</b> El desarrollo e implementación de esta iniciativa puede tener impactos importantes  en la organización: inverisón alta, tiempos de desarrollo largos, iteraciones continuas, equipos altamente enfocados.";
+    vinc.innerHTML = "<b>Incertidumbre Alta.</b> La información con la que se cuenta es muy limitada, la organización no cuenta con experiencia, es importante dimensionar el mercado, el tipo de usuario y el tipo de capacidad /tecnologías necesarias para el desarrollo y ejecución de la iniciativa.";
+    vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
+
+  } 
+
+/*
   if (vmer.selectedIndex == 0 || vcap.selectedIndex == 0) {
 
   } else if (vmer.selectedIndex <= 2 && vcap.selectedIndex <= 2 && vinv.selectedIndex == 3) {
@@ -52,7 +134,7 @@ myElem.onclick = function () {
     vrie.innerHTML = "<b>Riesgo alto.</b> El desarrollo e implementación de esta iniciativa puede tener impactos importantes  en la organización: inverisón alta, tiempos de desarrollo largos, iteraciones continuas, equipos altamente enfocados.";
     vinc.innerHTML = "<b>Incertidumbre Alta.</b> La información con la que se cuenta es muy limitada, la organización no cuenta con experiencia, es importante dimensionar el mercado, el tipo de usuario y el tipo de capacidad /tecnologías necesarias para el desarrollo y ejecución de la iniciativa.";
     vres.innerHTML =  vmer.selectedOptions[0].text + "; " +vcap.selectedOptions[0].text + "; "+vinv.selectedOptions[0].text+ "; "+vimp.selectedOptions[0].text;
-  }
+  }*/
 }
 
 
