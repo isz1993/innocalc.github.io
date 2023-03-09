@@ -16,9 +16,49 @@ const vres = document.getElementById('resultados');
 const vprodtext = document.getElementById('prodtext');
 
 
+var bar1=document.getElementById("bar1");
+var bar2=document.getElementById("bar2");
+
+
+
 myElem.onclick = function () {
 
+ /**Switches */
+ var switch1 = document.getElementById("flex1").checked;
+ var switch2 = document.getElementById("flex2").checked;
+ var switch3 = document.getElementById("flex3").checked;
+ var switch4 = document.getElementById("flex4").checked;
+ var switch5 = document.getElementById("flex5").checked;
+ var switch6 = document.getElementById("flex6").checked;
+
+ var acumswitch = 0;
+ let dicswitch = [switch1, switch2, switch3, switch4, switch5, switch6];
  
+
+ for (let vald of dicswitch) {
+   if (vald == true) {
+     acumswitch += (100/6);
+   }
+ }
+
+ 
+ 
+ bar1.style.width = Math.round (acumswitch)+"%";
+ bar1.innerText = Math.round (acumswitch) +"%";
+ 
+ var actrl=0;
+ actrl=vtrl.value*100/9
+
+
+ 
+ bar2.style.width = Math.round (actrl)+"%";
+ bar2.innerText = Math.round (actrl) +"%";
+
+ 
+
+
+
+
   if (vtipsl.selectedIndex==1 && vimpl.selectedIndex==1 && vprod.selectedIndex==1){
     vini.innerHTML = "<b>" + vnom.value + "</b>";
     vprodtext.innerHTML="<b>" + vprod.selectedOptions[0].text + "</b>";
